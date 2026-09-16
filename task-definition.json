@@ -1,0 +1,29 @@
+{
+  "family": "portfolio-app",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::368289941364:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "portfolio-app",
+      "image": "368289941364.dkr.ecr.us-west-2.amazonaws.com/portfolio-app:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "protocol": "tcp"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/portfolio-app",
+          "awslogs-region": "us-west-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}

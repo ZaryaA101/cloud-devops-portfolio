@@ -1,0 +1,15 @@
+venv/
+__pycache__/
+*.pyc
+.env
+*.pem
+*.key
+terraform/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.tfplan
+crash.log
+.vscode/
+.DS_Store
