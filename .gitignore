@@ -4,12 +4,15 @@ __pycache__/
 .env
 *.pem
 *.key
-terraform/.terraform/
+terraform/
+.terraform/
 *.tfstate
 *.tfstate.*
 *.tfvars
 *.tfvars.json
 *.tfplan
 crash.log
+*.swp
+*.swo
 .vscode/
 .DS_Store
